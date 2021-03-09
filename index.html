@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Country Information</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Country Information</h1>
+        <p class="icon-world">🌎</p>
+        <a href="./worldmap.html" target="_self" class="world-link"
+          >View world regions →</a
+        >
+      </header>
+      <div class="search-box">
+        <input id="input-search" type="text" placeholder="Country name" />
+        <button id="btn-search">Search</button>
+      </div>
+      <div class="results-box hidden">
+        <article class="results-inner-box hidden">
+          <aside>
+            <img class="country-flag" />
+          </aside>
+          <section>
+            <h2 class="country-header"></h2>
+            <div class="country-info"></div>
+          </section>
+        </article>
+        <h3 class="error-message hidden"></h3>
+      </div>
+      <img
+        src="./assets/spinner.gif"
+        id="spinner"
+        alt="spinner"
+        class="hideSpinner"
+      />
+    </main>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
